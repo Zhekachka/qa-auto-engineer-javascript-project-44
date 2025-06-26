@@ -4,7 +4,7 @@ const isEven = (num) => {
   return num % 2 === 0
 }
 
-const isEvenNumder = () => {
+const isEvenNumber = () => {
   const name = readlineSync.question('May I have your name? ')
   console.log(`Hello, ${name}!`)
   console.log('Answer "yes" if the number is even, otherwise answer "no".')
@@ -27,4 +27,4 @@ const isEvenNumder = () => {
 
   console.log(`Congratulations, ${name}!`)
 }
-export default isEvenNumder
+export default isEvenNumber
