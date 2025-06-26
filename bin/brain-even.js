@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import askForTheName from '../src/cli.js'
+import isEvenNumder from '../src/even.js'
 
 console.log('Welcome to the Brain Games!')
 
-askForTheName()
+isEvenNumder ()
