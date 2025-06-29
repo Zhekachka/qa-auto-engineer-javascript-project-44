@@ -1,30 +1,17 @@
-import readlineSync from 'readline-sync'
+import runGame from '../index.js'
 
+const getRandomNumber = (min = 1, max = 100) =>
+  Math.floor(Math.random() * (max - min + 1)) + min
+
+const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 const isEven = (num) => {
   return num % 2 === 0
 }
 
 const isEvenNumber = () => {
-  const name = readlineSync.question('May I have your name? ')
-  console.log(`Hello, ${name}!`)
-  console.log('Answer "yes" if the number is even, otherwise answer "no".')
-
-  let rounds = 3
-
-  for (let i = 0; i < rounds; i++) {
-    const number = Math.floor(Math.random() * 100)
-    const correctAnswer = isEven(number) ? 'yes' : 'no'
-    const userAnswer = readlineSync.question(`Question: ${number}\nYour answer: `)
-
-    if (userAnswer !== correctAnswer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
-      console.log(`Let's try again, ${name}!`)
-      return
-    }
-
-    console.log('Correct!')
-  }
-
-  console.log(`Congratulations, ${name}!`)
+  const number = getRandomNumber(1, 100)
+  const correctAnswer = isEven(number) ? 'yes' : 'no'
+  return [number, correctAnswer]
 }
-export default isEvenNumber
+
+export default () => runGame(description, isEvenNumber)
