@@ -1,5 +1,42 @@
 ### Hexlet tests and linter status:
 
+## Run brain-games
+
+```bash
+make brain-games
+```
+
+## Run brain-even
+
+```bash
+make brain-even
+```
+
+## Run brain-calc
+
+```bash
+make brain-calc
+```
+
+## Run brain-gcd
+
+```bash
+make brain-gcd
+```
+
+## Run brain-prime
+
+```bash
+make brain-prime
+```
+## Run brain-progression
+
+```bash
+make brain-progression
+```
+
+# Asciinema
+
 [![Actions Status](https://github.com/Zhekachka/qa-auto-engineer-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Zhekachka/qa-auto-engineer-javascript-project-44/actions)
 
 [![asciicast](https://asciinema.org/a/SsPZZTEQOCHx0Xr2KtDdhmS1m.svg)](https://asciinema.org/a/SsPZZTEQOCHx0Xr2KtDdhmS1m)

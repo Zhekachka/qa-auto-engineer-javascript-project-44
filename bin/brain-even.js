@@ -2,4 +2,4 @@
 
 import isEvenNumber from '../src/games/even.js'
 
-isEvenNumber ()
+isEvenNumber()

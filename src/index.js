@@ -5,9 +5,9 @@ const runGame = (description, getQuestionAndAnswer) => {
   const name = readlineSync.question('May I have your name? ')
   console.log(`Hello, ${name}!\n${description}`)
 
-  const rounds = 3
+  const roundsCount = 3
 
-  for (let i = 0; i < rounds; i++) {
+  for (let i = 0; i < roundsCount; i++) {
     const [question, correctAnswer] = getQuestionAndAnswer()
     console.log(`Question: ${question}`)
     const userAnswer = readlineSync.question('Your answer: ')

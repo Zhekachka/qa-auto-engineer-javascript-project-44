@@ -2,7 +2,7 @@ import runGame from '../index.js'
 
 const description = 'What is the result of the expression?'
 
-const calculate = () => {
+const generateCalculationRound = () => {
   const operations = ['+', '-', '*']
 
   let number1 = Math.floor(Math.random() * 100)
@@ -23,7 +23,9 @@ const calculate = () => {
     case '*':
       correctAnswer = number1 * number2
       break
+    default:
+      throw new Error(`Unknown operation: ${operation}`)
   }
   return [question, String(correctAnswer)]
 }
-export default () => runGame(description, calculate)
+export default () => runGame(description, generateCalculationRound)

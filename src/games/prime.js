@@ -20,10 +20,10 @@ const isPrime = (number) => {
   return true
 }
 
-const isPrimeNumber = () => {
+const generateRound = () => {
   const number = Math.floor(Math.random() * 100) + 1
   const correctAnswer = isPrime(number) ? 'yes' : 'no'
   return [number, correctAnswer]
 }
 
-export default () => runGame(description, isPrimeNumber)
+export default () => runGame(description, generateRound)
