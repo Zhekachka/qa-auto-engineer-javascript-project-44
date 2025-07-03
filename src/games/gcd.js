@@ -12,12 +12,12 @@ const euclideanAlgorithm = (a, b) => {
 }
 
 const getRandomNumber = (min = 1, max = 100) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
 
 const greatestCommonDivisor = () => {
-  let number1 = getRandomNumber();
-  let number2 = getRandomNumber();
+  let number1 = getRandomNumber()
+  let number2 = getRandomNumber()
 
   const question = `${number1} ${number2}`
 
