@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import findMissingNumber from '../src/games/progression.js'
+import generateProgressionRound from '../src/games/progression.js'
 
-findMissingNumber()
+generateProgressionRound()

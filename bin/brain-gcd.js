@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import greatestCommonDivisor from '../src/games/gcd.js'
+import ggenerateGcdRound from '../src/games/gcd.js'
 
-greatestCommonDivisor()
+ggenerateGcdRound()

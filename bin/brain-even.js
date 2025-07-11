@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import isEvenNumber from '../src/games/even.js'
+import generateEvenRound from '../src/games/even.js'
 
-isEvenNumber()
+generateEvenRound()

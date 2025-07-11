@@ -1,8 +1,9 @@
 import runGame from '../index.js'
+import { getRandomNumber } from '../utils.js'
 
 const description = 'Find the greatest common divisor of given numbers.'
 
-const euclideanAlgorithm = (a, b) => {
+const calculateGcd = (a, b) => {
   while (b !== 0) {
     const temp = b
     b = a % b
@@ -11,18 +12,14 @@ const euclideanAlgorithm = (a, b) => {
   return a
 }
 
-const getRandomNumber = (min = 1, max = 100) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min
-}
-
-const greatestCommonDivisor = () => {
-  let number1 = getRandomNumber()
-  let number2 = getRandomNumber()
+const generateGcdRound = () => {
+  const number1 = getRandomNumber()
+  const number2 = getRandomNumber()
 
   const question = `${number1} ${number2}`
 
-  let correctAnswer = euclideanAlgorithm(number1, number2)
+  const correctAnswer = calculateGcd(number1, number2)
   return [question, correctAnswer]
 }
 
-export default () => runGame(description, greatestCommonDivisor)
+export default () => runGame(description, generateGcdRound)

@@ -1,31 +1,30 @@
 import runGame from '../index.js'
+import { getRandomNumber } from '../utils.js'
 
 const description = 'What is the result of the expression?'
+const operations = ['+', '-', '*']
 
-const generateCalculationRound = () => {
-  const operations = ['+', '-', '*']
-
-  let number1 = Math.floor(Math.random() * 100)
-  let number2 = Math.floor(Math.random() * 100)
-  const operation = operations[Math.floor(Math.random() * operations.length)]
-
-  const question = `${number1} ${operation} ${number2}`
-
-  let correctAnswer
-
+const calculate = (number1, number2, operation) => {
   switch (operation) {
     case '+':
-      correctAnswer = number1 + number2
-      break
+      return number1 + number2
     case '-':
-      correctAnswer = number1 - number2
-      break
+      return number1 - number2
     case '*':
-      correctAnswer = number1 * number2
-      break
+      return number1 * number2
     default:
       throw new Error(`Unknown operation: ${operation}`)
   }
-  return [question, String(correctAnswer)]
+}
+
+const generateCalculationRound = () => {
+  const number1 = getRandomNumber()
+  const number2 = getRandomNumber()
+  const operation = operations[getRandomNumber(0, operations.length - 1)]
+
+  const question = `${number1} ${operation} ${number2}`
+  const correctAnswer = String(calculate(number1, number2, operation))
+
+  return [question, correctAnswer]
 }
 export default () => runGame(description, generateCalculationRound)
