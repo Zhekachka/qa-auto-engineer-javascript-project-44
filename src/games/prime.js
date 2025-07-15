@@ -25,7 +25,7 @@ const isPrime = (number) => {
 const generatePrimeRound = () => {
   const number = getRandomNumber()
   const correctAnswer = isPrime(number) ? 'yes' : 'no'
-  return [number, correctAnswer.toString()]
+  return [number.toString(), correctAnswer.toString()]
 }
 
 const runPrime = () => generateRound(description, generatePrimeRound)

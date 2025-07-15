@@ -10,7 +10,7 @@ const isEven = (number) => {
 const generateEvenRound = () => {
   const number = getRandomNumber()
   const correctAnswer = isEven(number) ? 'yes' : 'no'
-  return [number, correctAnswer.toString()]
+  return [number.toString(), correctAnswer.toString()]
 }
 
 const runEven = () => generateRound(description, generateEvenRound)
