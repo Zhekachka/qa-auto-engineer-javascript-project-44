@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import generateProgressionRound from '../src/games/progression.js'
+import runProgression from '../src/games/progression.js'
 
-generateProgressionRound()
+runProgression()

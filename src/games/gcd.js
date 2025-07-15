@@ -1,16 +1,11 @@
-import runGame from '../index.js'
+import generateRound from '../index.js'
 import { getRandomNumber } from '../utils.js'
 
 const description = 'Find the greatest common divisor of given numbers.'
 
-const calculateGcd = (a, b) => {
-  while (b !== 0) {
-    const temp = b
-    b = a % b
-    a = temp
-  }
-  return a
-}
+const calculateGcd = (a, b) => (
+  b === 0 ? a : calculateGcd(b, a % b)
+)
 
 const generateGcdRound = () => {
   const number1 = getRandomNumber()
@@ -19,7 +14,9 @@ const generateGcdRound = () => {
   const question = `${number1} ${number2}`
 
   const correctAnswer = calculateGcd(number1, number2)
-  return [question, correctAnswer]
+  return [question, correctAnswer.toString()]
 }
 
-export default () => runGame(description, generateGcdRound)
+const runGcd = () => generateRound(description, generateGcdRound)
+
+export default runGcd

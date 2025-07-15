@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import generatePrimeRound from '../src/games/prime.js'
+import runPrime from '../src/games/prime.js'
 
-generatePrimeRound()
+runPrime()
