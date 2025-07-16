@@ -1,4 +1,4 @@
-import generateRound from '../index.js'
+import runGame from '../index.js'
 import { getRandomNumber } from '../utils.js'
 
 const description = 'Find the greatest common divisor of given numbers.'
@@ -17,6 +17,6 @@ const generateGcdRound = () => {
   return [question, correctAnswer.toString()]
 }
 
-const runGcd = () => generateRound(description, generateGcdRound)
+const runGcd = () => runGame(description, generateGcdRound)
 
 export default runGcd

@@ -1,4 +1,4 @@
-import generateRound from '../index.js'
+import runGame from '../index.js'
 import { getRandomNumber } from '../utils.js'
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".'
@@ -13,6 +13,6 @@ const generateEvenRound = () => {
   return [number.toString(), correctAnswer.toString()]
 }
 
-const runEven = () => generateRound(description, generateEvenRound)
+const runEven = () => runGame(description, generateEvenRound)
 
 export default runEven

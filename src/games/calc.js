@@ -1,4 +1,4 @@
-import generateRound from '../index.js'
+import runGame from '../index.js'
 import { getRandomNumber } from '../utils.js'
 
 const description = 'What is the result of the expression?'
@@ -28,6 +28,6 @@ const generateCalculationRound = () => {
   return [question, correctAnswer.toString()]
 }
 
-const runCalc = () => generateRound(description, generateCalculationRound)
+const runCalc = () => runGame(description, generateCalculationRound)
 
 export default runCalc

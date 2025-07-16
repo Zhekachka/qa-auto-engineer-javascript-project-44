@@ -1,4 +1,4 @@
-import generateRound from '../index.js'
+import runGame from '../index.js'
 import { getRandomNumber } from '../utils.js'
 
 const description = 'What number is missing in the progression?'
@@ -16,7 +16,7 @@ const generateProgressionRound = () => {
   const start = getRandomNumber()
   const step = getRandomNumber()
   const progression = generateArithmeticProgression(start, step, length)
-  const hiddenElementIndex = getRandomNumber(0, length - 1)
+  const hiddenElementIndex = getRandomNumber(0, progression.length - 1)
   const correctAnswer = progression[hiddenElementIndex]
   progression[hiddenElementIndex] = '..'
   const question = progression.join(' ')
@@ -24,6 +24,6 @@ const generateProgressionRound = () => {
   return [question, correctAnswer.toString()]
 }
 
-const runProgression = () => generateRound(description, generateProgressionRound)
+const runProgression = () => runGame(description, generateProgressionRound)
 
 export default runProgression
